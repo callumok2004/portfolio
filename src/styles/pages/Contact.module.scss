@@ -1,0 +1,83 @@
+.sectionContainer {
+    .sectionItem {
+        height: 100px;
+        width: 300px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 10px;
+        position: relative;
+        animation: shrink 0.5s;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+
+        &:nth-child(1)::before {
+            background: url('/discord.png') no-repeat center;
+            background-size: cover;
+        }
+
+        &:nth-child(2)::before {
+            background: url('/snapchat.png') no-repeat center;
+            background-size: cover;
+        }
+
+        &:nth-child(3)::before {
+            background: url('/instagram.png') no-repeat center;
+            background-size: cover;
+        }
+
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(10px) brightness(50%);
+        }
+
+        img {
+            width: 20%;
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+        }
+
+        a[id="full"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            span {
+                opacity: 0.6;
+            }
+        }
+
+        &:hover {
+            animation: grow 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes grow {
+    from {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    to {
+        border: 1px solid #fff;
+    }
+}
+
+@keyframes shrink {
+    from {
+        border: 1px solid #fff;
+    }
+    to {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+}

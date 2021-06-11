@@ -30,13 +30,14 @@ export default function Navigation(props) {
             </div>
 
             <div className={styles.footer}>
+                <div className={styles.footerLeft}>
+                    Designed & Developed by Callum and <b><a target="_blank" href="https://itspolar.dev">itspolar</a></b>
+                </div>
+                <div className={styles.seperate} style={{flex: 1}}></div>
                 <div className={styles.footerRight}>
                     <a href="https://twitter.com/CallumDEV_" target="_blank" className="fab fa-twitter" />
                     <a href="https://instagram.com/callum.o.kane" target="_blank" className="fab fa-instagram" />
                     <a href="https://github.com/callumok2004" target="_blank" className="fab fa-github" />
-                </div>
-                <div className={styles.footerLeft}>
-                    Designed & Developed by Callum and <b><a target="_blank" href="https://itspolar.dev">itspolar</a></b>
                 </div>
             </div>
         </>
