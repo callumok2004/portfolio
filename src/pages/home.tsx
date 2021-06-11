@@ -48,8 +48,8 @@ export default function Home() {
                         <span><i className="fal fa-power-off fa-fw" /> Currently {user && getStatus()}</span><br />
                         {user?.discord_status !== "offline" && (
                             <>
-                                <span><i className="fal fa-gamepad-alt fa-fw" /> {user?.activities.filter(x => x.type == 0)[0]?.name || "Not Playing Anything..."}</span><br />
-                                <span><i className="fal fa-sticky-note fa-fw" /> {user?.activities.filter(x => x.type == 4)[0]?.state || "No Custom Status"}</span><br />
+                                {user?.activities.filter(x => x.type == 0)[0] && <><span><i className="fal fa-gamepad-alt fa-fw" /> {user?.activities.filter(x => x.type == 0)[0].name}</span><br /></>}
+                                {user?.activities.filter(x => x.type == 4)[0] && <><span><i className="fal fa-sticky-note fa-fw" /> {user?.activities.filter(x => x.type == 4)[0].state}</span><br /></>}
                             </>
                         )}
                         <span><i className="fal fa-clock fa-fw" /> {time || "Couldn't get time."}</span>
