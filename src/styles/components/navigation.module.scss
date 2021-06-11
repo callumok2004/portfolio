@@ -1,5 +1,3 @@
-
-
 .base {
     height: 50px;
     width: 100%;
@@ -25,7 +23,7 @@
         padding-top: 10px;
         height: 50px;
         border-radius: 10px;
-        
+
         .statusIcon {
             position: absolute;
             height: 10px;
@@ -47,7 +45,7 @@
         span {
             float: left;
             border-radius: 50%;
-            margin-top: .5vh;
+            margin-top: 0.5vh;
             width: 5vh;
         }
     }
@@ -70,7 +68,7 @@
 
     .footerRight {
         position: absolute;
-        right: -.7%;
+        right: -0.7%;
         top: 50%;
         transform: translate(-50%, -50%);
 
@@ -80,16 +78,19 @@
     }
 }
 
-
 @keyframes hello {
-    from { opacity: 0 };
-    to { opacity: 1 };
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
     .footerRight {
         position: absolute;
-        right: -.7%;
+        right: -0.7%;
         top: 50%;
         transform: translate(-50%, -50%);
     }

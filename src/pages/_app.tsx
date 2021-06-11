@@ -1,4 +1,5 @@
-import "../styles/globals.scss";
+import '../styles/globals.scss';
+
 import NextNprogress from 'nextjs-progressbar';
 
 export default function CallumDEV({ Component, pageProps }) {

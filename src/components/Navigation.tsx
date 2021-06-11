@@ -1,6 +1,7 @@
-import styles from "../styles/components/navigation.module.scss";
 import Router from 'next/router';
-import { useLanyard } from "use-lanyard";
+import { useLanyard } from 'use-lanyard';
+
+import styles from '../styles/components/navigation.module.scss';
 
 export default function Navigation(props) {
     const { data: user } = useLanyard("506899274748133376");

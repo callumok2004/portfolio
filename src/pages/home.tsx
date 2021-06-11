@@ -46,8 +46,12 @@ export default function Home() {
                 <div className={styles.margin}>
                     <p className={styles.status}>
                         <span><i className="fal fa-power-off fa-fw" /> Currently {user && getStatus()}</span><br />
-                        <span><i className="fal fa-gamepad-alt fa-fw" /> {user?.activities.filter(x => x.type == 0)[0]?.name || "Not Playing Anything..."}</span><br />
-                        <span><i className="fal fa-sticky-note fa-fw" /> {user?.activities.filter(x => x.type == 4)[0]?.state || "No Custom Status"}</span><br />
+                        {user?.discord_status !== "offline" && (
+                            <>
+                                <span><i className="fal fa-gamepad-alt fa-fw" /> {user?.activities.filter(x => x.type == 0)[0]?.name || "Not Playing Anything..."}</span><br />
+                                <span><i className="fal fa-sticky-note fa-fw" /> {user?.activities.filter(x => x.type == 4)[0]?.state || "No Custom Status"}</span><br />
+                            </>
+                        )}
                         <span><i className="fal fa-clock fa-fw" /> {time || "Couldn't get time."}</span>
                     </p>
                 </div>
